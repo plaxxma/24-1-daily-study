@@ -1,0 +1,27 @@
+#include <stdio.h>
+//search는 배열이 훠어어얼씬 빠르다............
+int main()
+{
+    int arr[200005];
+    int N, M, V;
+    scanf("%d %d %d",&N,&M,&V);
+    V--;
+    
+    
+    for(int i=0;i<N;i++){
+        scanf("%d",&arr[i]);
+    }
+    
+    int K;
+    for (int i=0;i<M;i++){
+        scanf("%d",&K);
+        if(K>=N){
+            printf("%d\n",arr[V+(K-V)%(N-V)]);
+        }
+        else{
+            printf("%d\n",arr[K]);
+        }
+        
+    }
+    return 0;
+}
